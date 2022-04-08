@@ -1,0 +1,61 @@
+<!-- <p>user-profile works!</p>
+<p>{{userDetails | json}}</p>
+<table mat-table [dataSource]="userDetails" class="mat-elevation-z8">
+
+    
+    <ng-container matColumnDef="image">
+      <th mat-header-cell *matHeaderCellDef> Image </th>
+      <td mat-cell *matCellDef="let element" ><img src= {{element.avatar}}> </td>
+       
+    </ng-container>
+  
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>First Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.first_name}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="lastname">
+        <th mat-header-cell *matHeaderCellDef>Last Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.last_name}} </td>
+    </ng-container>
+   
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+   
+    <ng-container matColumnDef="support">
+        <th mat-header-cell *matHeaderCellDef>support </th>
+        <td mat-cell *matCellDef="let element"> {{element.support.avatar}} </td>
+    </ng-container>
+
+     <ng-container matColumnDef="text">
+        <th mat-header-cell *matHeaderCellDef>text </th>
+        <td mat-cell *matCellDef="let element"> {{element.support.text}} </td>
+    </ng-container> 
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>   -->
+
+ <table>
+      <tr colspan='3'>
+        <th> id </th>
+        <th> UserProfile </th>
+          <th> first name </th>
+          <th> last name </th>
+          <th> avatar </th>
+          <th> email </th>
+          <th> text </th>
+      </tr>
+      <tr>
+          <td>{{userDetails.data.id}}</td>
+          <td><img src={{userDetails.data.avatar}}></td>
+          <td>{{userDetails.data.first_name}}</td>
+          <td>{{userDetails.data.last_name}}</td>
+          <td>{{userDetails.data.avatar}}</td>
+          <td>{{userDetails.data.email}}</td> 
+          <td>{{userDetails.support.text}}</td>
+      </tr>
+  </table>  
